@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SNGPublicAPI</name>
+    </assembly>
+    <members>
+        <member name="M:OWSPublicAPI.Controllers.ItemsController.#ctor(SNGPublicAPI.Repositories.Interfaces.IItemsRepository,OWSShared.Interfaces.IHeaderCustomerGUID)">
+            <summary>
+            Constructor for Item related API calls.
+            </summary>
+            <remarks>
+            All dependencies are injected.
+            </remarks>
+        </member>
+        <member name="M:OWSPublicAPI.Controllers.ItemsController.GetAllItems">
+            <summary>
+            Get All Items
+            </summary>
+            <remarks>
+            Gets a list of all items from the database
+            </remarks>
+        </member>
+        <member name="T:OWSPublicAPI.Requests.Items.GetAllItemsRequest">
+            <summary>
+            GetAllItemsRequest
+            </summary>
+            <remarks>
+            This request object handles requests for api/Items/GetAllItemsRequest
+            </remarks>
+        </member>
+        <member name="M:OWSPublicAPI.Requests.Items.GetAllItemsRequest.SetData(SNGPublicAPI.Repositories.Interfaces.IItemsRepository,OWSShared.Interfaces.IHeaderCustomerGUID)">
+            <summary>
+            SetData
+            </summary>
+            <remarks>
+            Used to pass dependencies to the Request object (for performance reasons).
+            </remarks>
+        </member>
+        <member name="M:OWSPublicAPI.Requests.Items.GetAllItemsRequest.Handle">
+            <summary>
+            Handle
+            </summary>
+            <remarks>
+            This handles the Request.
+            </remarks>
+        </member>
+        <member name="T:SNGPublicAPI.Program">
+            <summary>
+            OWS Public API Program
+            </summary>
+            <remarks>
+            The program class.
+            </remarks>
+        </member>
+        <member name="M:SNGPublicAPI.Program.Main(System.String[])">
+            <summary>
+            OWS Public API Main
+            </summary>
+            <remarks>
+            The program entry point.
+            </remarks>
+        </member>
+        <member name="M:SNGPublicAPI.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            OWS Public API CreateHostBuilder
+            </summary>
+            <remarks>
+            Configure the web host.
+            </remarks>
+        </member>
+    </members>
+</doc>
