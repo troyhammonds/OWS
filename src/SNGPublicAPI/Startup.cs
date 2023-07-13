@@ -22,8 +22,7 @@ using System.Text.Encodings.Web;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Http;
 using OWSData.Repositories.Interfaces;
-using OWSData.Repositories.Implementations;
-//using SNGPublicAPI.Requests;
+using SNGPublicAPI.Repositories.Interfaces;
 using OWSShared.Interfaces;
 using OWSShared.Implementations;
 using OWSShared.Middleware;
@@ -177,10 +176,12 @@ namespace SNGPublicAPI
                     case "mysql":
                         container.Register<ICharactersRepository, OWSData.Repositories.Implementations.MySQL.CharactersRepository>(Lifestyle.Transient);
                         container.Register<IUsersRepository, OWSData.Repositories.Implementations.MySQL.UsersRepository>(Lifestyle.Transient);
+                        container.Register<IItemsRepository, SNGPublicAPI.Repositories.Implementations.MySQL.ItemsRepository>(Lifestyle.Transient);
                         break;
                     default: // Default to MSSQL
                         container.Register<ICharactersRepository, OWSData.Repositories.Implementations.MSSQL.CharactersRepository>(Lifestyle.Transient);
                         container.Register<IUsersRepository, OWSData.Repositories.Implementations.MSSQL.UsersRepository>(Lifestyle.Transient);
+                        container.Register<IItemsRepository, SNGPublicAPI.Repositories.Implementations.MSSQL.ItemsRepository>(Lifestyle.Transient);
                         break;
                 }
             }
